@@ -15,7 +15,7 @@ then
 fi
 
 # authorized_key に設定
-curl -L https://github.com/ikezoeMakoto.keys >> $auth_file
+curl -L https://github.com/ikezoeMakoto.keys > $auth_file
 
 
 # git prompt 設定
