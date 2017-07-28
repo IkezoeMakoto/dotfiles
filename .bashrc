@@ -20,6 +20,7 @@ alias ll='ls -AlFh --show-control-chars --color=auto'
 alias la='ls -CFal'
 alias fig=docker-compose
 alias sc=screen
+alias scr='sc -R'
 alias scl='sc -list'
 alias mv='mv -i'
 alias rm='rm -i'
