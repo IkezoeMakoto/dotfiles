@@ -11,4 +11,4 @@
     br = checkout -b
     pu = push origin $(git symbolic-ref --short HEAD)
 [push]
-	default = simple
+    default = simple

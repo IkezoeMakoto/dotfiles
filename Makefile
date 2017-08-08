@@ -1,5 +1,5 @@
-TPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
-CANDIDATES := $(wildcard .??*) bin
+DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
+CANDIDATES := $(wildcard .??*)
 EXCLUSIONS := .DS_Store .git .gitmodules .travis.ym .gitignore
 DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
