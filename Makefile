@@ -7,7 +7,7 @@ DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
 all:
 
-li:
+ls:
 	/bin/ls
 
 list: ## Show dot files in this repo
