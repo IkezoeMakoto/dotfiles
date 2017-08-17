@@ -14,18 +14,25 @@ export PS1='\[\033[32m\]\u@\H\[\033[00m\]:\[\033[35m\]\w\[\033[00m\]$(__git_ps1)
 # ctrl+s で出力がロックされてしまうのを防ぐ
 stty stop undef
 
+#########################################
 # alias
+#########################################
+# unix
 alias ls='ls -CF'
 alias ll='ls -AlFh --show-control-chars --color=auto'
 alias la='ls -CFal'
-alias fig=docker-compose
-alias sc=screen
-alias scr='sc -R'
-alias scl='sc -list'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
 alias ps='ps --sort=start_time'
+# docker
+alias fig=docker-compose
+# screen
+alias sc=screen
+alias scr='sc -R'
+alias scl='sc -list'
+# tmux
+alias tm='tmux'
 
 # git-completion.bash / git-prompt.sh
 #
