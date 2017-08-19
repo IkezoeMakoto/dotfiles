@@ -29,6 +29,7 @@ alias ps='ps --sort=start_time'
 alias fig=docker-compose
 # screen
 alias sc=screen
+alias scx='sc -x'
 alias scr='sc -R'
 alias scl='sc -list'
 # tmux
