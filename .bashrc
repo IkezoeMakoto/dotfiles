@@ -32,6 +32,9 @@ alias scl='sc -list'
 # tmux
 alias tm='tmux'
 
+#########################################
+# PS1
+#########################################
 # git-completion.bash / git-prompt.sh
 #
 if [ -f /usr/local/bin/git-completion.bash ]; then
