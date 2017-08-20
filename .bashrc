@@ -8,9 +8,6 @@ fi
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-# User specific aliases and functions
-export PS1='\[\033[32m\]\u@\H\[\033[00m\]:\[\033[35m\]\w\[\033[00m\]$(__git_ps1)\n$ '
-
 # ctrl+s で出力がロックされてしまうのを防ぐ
 stty stop undef
 
@@ -29,6 +26,7 @@ alias ps='ps --sort=start_time'
 alias fig=docker-compose
 # screen
 alias sc=screen
+alias scx='sc -x'
 alias scr='sc -R'
 alias scl='sc -list'
 # tmux
@@ -46,3 +44,25 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
+
+# PS1 setting
+#color mapping
+#_color_map=(${_color_map[*]} 0)   # black
+_color_map=(${_color_map[*]} 1)   # red
+_color_map=(${_color_map[*]} 2)   # green
+_color_map=(${_color_map[*]} 3)   # yellow
+_color_map=(${_color_map[*]} 4)   # blue
+_color_map=(${_color_map[*]} 5)   # magenta
+_color_map=(${_color_map[*]} 6)   # cyan
+_color_map=(${_color_map[*]} 7)   # white
+
+# Coloring hostname and username
+_cl_host_index=$(/usr/bin/python -c 'print hash("'$HOSTNAME'") % '${#_color_map[*]}'')
+_cl_user_index=$(/usr/bin/python -c 'print hash("'$USER'") % '${#_color_map[*]}'')
+
+# color setting
+_colored_host=$(echo -e "\e[03${_color_map[${_cl_host_index}]}m\H\e[m")
+_colored_user=$(echo -e "\e[03${_color_map[${_cl_user_index}]}m\u\e[m")
+
+# prompt setting
+PS1="\[${_colored_user}@${_colored_host}:\[\033[35m\]\w\[\033[00m\]\]"'$(__git_ps1)\n$ '
