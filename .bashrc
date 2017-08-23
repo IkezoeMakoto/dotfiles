@@ -32,6 +32,9 @@ alias scl='sc -list'
 # tmux
 alias tm='tmux'
 
+#########################################
+# PS1
+#########################################
 # git-completion.bash / git-prompt.sh
 #
 if [ -f /usr/local/bin/git-completion.bash ]; then
@@ -47,6 +50,7 @@ GIT_PS1_SHOWUPSTREAM=auto
 
 # PS1 setting
 #color mapping
+unset -v _color_map
 #_color_map=(${_color_map[*]} 0)   # black
 _color_map=(${_color_map[*]} 1)   # red
 _color_map=(${_color_map[*]} 2)   # green
