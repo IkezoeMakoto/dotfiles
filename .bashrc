@@ -5,6 +5,11 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# bash_completion for mac
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
@@ -14,21 +19,34 @@ stty stop undef
 #########################################
 # alias
 #########################################
-# unix
-alias ls='ls -CF'
-alias ll='ls -AlFh --show-control-chars --color=auto'
-alias la='ls -CFal'
+case "${OSTYPE}" in
+darwin*)
+  # mac
+  alias ls='ls -CFG'
+  alias ll='ls -AlFhG'
+  alias la='ls -CFalG'
+  ;;
+linux*)
+  # linux
+  alias ls='ls -CF'
+  alias ll='ls -AlFh --show-control-chars --color=auto'
+  alias la='ls -CFal'
+  ;;
+esac
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
 alias ps='ps --sort=start_time'
+
 # docker
 alias fig=docker-compose
+
 # screen
 alias sc=screen
 alias scx='sc -x'
 alias scr='sc -R'
 alias scl='sc -list'
+
 # tmux
 alias tm='tmux'
 
