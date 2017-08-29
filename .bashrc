@@ -1,23 +1,41 @@
 # .bashrc
+export LANG=ja_JP.UTF-8
+export LESSCHARSET=utf-8
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
-# ctrl+s ¤Ç½ĞÎÏ¤¬¥í¥Ã¥¯¤µ¤ì¤Æ¤·¤Ş¤¦¤Î¤òËÉ¤°
+# ctrl+s ã§å‡ºåŠ›ãŒãƒ­ãƒƒã‚¯ã•ã‚Œã¦ã—ã¾ã†ã®ã‚’é˜²ã
 stty stop undef
 
 #########################################
-# alias
+# OSã”ã¨ã®è¨­å®š
 #########################################
-# unix
-alias ls='ls -CF'
-alias ll='ls -AlFh --show-control-chars --color=auto'
-alias la='ls -CFal'
+case "${OSTYPE}" in
+# mac
+darwin*)
+  # bash_completion for mac
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
+      . `brew --prefix`/etc/bash_completion
+  fi
+
+  #########################################
+  # alias
+  #########################################
+  alias ls='ls -CFG'
+  alias ll='ls -AlFhG'
+  alias la='ls -CFalG'
+  ;;
+# linux
+linux*)
+  alias ls='ls -CF'
+  alias ll='ls -AlFh --show-control-chars --color=auto'
+  alias la='ls -CFal'
+  ;;
+esac
+# å…±é€š
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
