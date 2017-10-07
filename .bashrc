@@ -55,11 +55,11 @@ alias tm='tmux'
 #########################################
 # git-completion.bash / git-prompt.sh
 #
-if [ -f /usr/local/bin/git-completion.bash ]; then
-    source /usr/local/bin/git-completion.bash
+if [ -f ~/bin/git-completion.bash ]; then
+    source ~/bin/git-completion.bash
 fi
-if [ -f /usr/local/bin/git-prompt.sh ]; then
-    source /usr/local/bin/git-prompt.sh
+if [ -f ~/bin/git-prompt.sh ]; then
+    source ~/bin/git-prompt.sh
 fi
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
