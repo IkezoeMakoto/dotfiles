@@ -1,7 +1,6 @@
 #!/bin/bash
 auth_file=~/.ssh/authorized_keys
 ssh_dir=~/.ssh
-bin_dir=~/bin
 
 if [ ! -e $ssh_dir ];
 then
@@ -13,12 +12,6 @@ if [ ! -e $auth_file ];
 then
     touch $auth_file
     chmod 600 $auth_file
-fi
-
-if [ ! -e $bin_dir ];
-then
-    mkdir $bin_dir
-    chmod 700 $bin_dir
 fi
 
 # authorized_key に設定
