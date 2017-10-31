@@ -43,6 +43,7 @@ alias ps='ps --sort=start_time'
 # docker
 alias fig=docker-compose
 # screen
+export SCREENDIR=~/.screens
 alias sc=screen
 alias scx='sc -x'
 alias scr='sc -R'

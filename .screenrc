@@ -1,0 +1,29 @@
+# enable scroll
+termcapinfo linux ti@:te@
+termcapinfo xterm ti@:te@
+termcapinfo xterm-color ti@:te@
+defscrollback 1024
+
+# escape setting Ctrl-t
+escape ^Tt
+
+# Delete sartt up screen
+startup_message OFF
+
+# Enable Auto detach
+autodetach on
+
+# disp status bar with color mode
+hardstatus alwayslastline "%{= rw} %H %{= wk}%-Lw%{= bw}%n%f* %t%{= wk}%+Lw %{= wk}%=%{= gk} %y/%m/%d %c "
+
+# Resize window
+bind e eval 'command -c resize' 'echo "Resize window"'
+bind ^e eval 'command -c resize' 'echo "Resize window"'
+bind -c resize h eval 'command -c resize' 'resize -h -1'
+bind -c resize l eval 'command -c resize' 'resize -h +1'
+bind -c resize j eval 'command -c resize' 'resize -v +1'
+bind -c resize k eval 'command -c resize' 'resize -v -1'
+bind -c resize ^h eval 'command -c resize' 'resize -h -1'
+bind -c resize ^l eval 'command -c resize' 'resize -h +1'
+bind -c resize ^j eval 'command -c resize' 'resize -v +1'
+bind -c resize ^k eval 'command -c resize' 'resize -v -1'
