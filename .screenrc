@@ -4,17 +4,22 @@ termcapinfo xterm ti@:te@
 termcapinfo xterm-color ti@:te@
 defscrollback 1024
 
+# tail message
+defmonitor on
+
 # escape setting Ctrl-t
 escape ^Tt
 
-# Delete sartt up screen
-startup_message OFF
+# Delete start up screen
+startup_message off
 
 # Enable Auto detach
 autodetach on
 
 # disp status bar with color mode
 hardstatus alwayslastline "%{= rw} %H %{= wk}%-Lw%{= bw}%n%f* %t%{= wk}%+Lw %{= wk}%=%{= gk} %y/%m/%d %c "
+#hardstatus alwayslastline "%{=r dd}%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+#hardstatus alwayslastline '%{= kw}%02c:%s %{= .y}%H %L=%{= .b}%-w%46>%{= .r}%n %t*%{= .b}%+w%-16=%{= .y}[%l]'
 
 # Resize window
 bind e eval 'command -c resize' 'echo "Resize window"'
