@@ -30,6 +30,10 @@ darwin*)
   ;;
 # linux
 linux*)
+  # bash_completion for linux
+  if [ -f /etc/profile.d/bash_completion.sh ]; then
+      source /etc/profile.d/bash_completion.sh
+  fi
   alias ls='ls -CF'
   alias ll='ls -AlFh --show-control-chars --color=auto'
   alias la='ls -CFal'

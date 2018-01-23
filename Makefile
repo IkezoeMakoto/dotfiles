@@ -24,3 +24,5 @@ clean: ## Remove the dot files and this repo
 	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
 	-rm -rf $(DOTPATH)
 
+install:
+	$(MAKE) -C bin
