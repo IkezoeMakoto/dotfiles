@@ -25,5 +25,5 @@ clean: ## Remove the dot files and this repo
 	-rm -rf $(DOTPATH)
 
 install:
-	$(MAKE) -C bin
+	$(MAKE) -j -C bin
 
