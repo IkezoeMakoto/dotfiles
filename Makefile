@@ -1,5 +1,5 @@
 DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
-CANDIDATES := $(wildcard .??*)
+CANDIDATES := $(wildcard .??*) bin
 EXCLUSIONS := .DS_Store .git .gitmodules .travis.ym .gitignore
 DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
@@ -26,3 +26,4 @@ clean: ## Remove the dot files and this repo
 
 install:
 	$(MAKE) -C bin
+
