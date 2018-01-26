@@ -17,11 +17,7 @@ fi
 # authorized_key に設定
 curl -L https://github.com/ikezoeMakoto.keys > $auth_file
 
-# git prompt 設定
-wget https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-wget https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
-mv git-* ~/bin/
-
+# clone self
 git clone git@github.com:IkezoeMakoto/dotfiles.git
 cd dotfiles/
 make deploy
