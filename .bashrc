@@ -1,6 +1,7 @@
 # .bashrc
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
+export GOPATH=$HOME/local/go
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -43,7 +44,7 @@ esac
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
-alias ps='ps --sort=start_time'
+#alias ps='ps --sort=start_time'
 # docker
 alias fig=docker-compose
 # screen
