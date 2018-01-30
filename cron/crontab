@@ -1,0 +1,2 @@
+
+05 * * * * /usr/bin/docker system prune
