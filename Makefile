@@ -21,9 +21,9 @@ install:
 	$(MAKE) -j -C bin
 
 cron/set:
-	crontab cron/crontab
+	crontab etc/cron/crontab
 cron/get:
-	crontab -l > cron/crontab
+	crontab -l > etc/cron/crontab
 
 clean: ## Remove the dot files and this repo
 	@echo 'Remove dot files in your home directory...'
