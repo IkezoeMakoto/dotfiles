@@ -1,2 +1,3 @@
+MAILTO=150283t@gmail.com
 
-05 * * * * /usr/bin/docker system prune
+05 * * * * /usr/bin/docker system prune -f >/dev/null
