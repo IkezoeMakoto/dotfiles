@@ -4,18 +4,18 @@
 [color]
 	ui = true
 [alias]
-    st = status
-    co = checkout
-    ci = commit
-    graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
-    br = checkout -b
-    pl = pull --prune
-    # http://qiita.com/hajimeni/items/73d2155fc59e152630c4
-    clean-local = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|master'|xargs git branch -d; };f"
-    clean-remote = remote prune origin
-    # http://qiita.com/ktty1220/items/d1daf4357ed5f5ceae69
-    as = !"if test -z $1; then loop=; for k in `git config --get-regexp ^alias\\. | sort | sed -e 's/^alias\\.\\(\\S*\\).*/\\1/g'`; do echo -n $k; loop="${loop}1"; if test ${#loop} -lt 5; then echo -n '\t'; else echo; loop=; fi; done; exit; fi; git config --list | grep ^alias\\.$1= | sed -e s/^alias\\.//; exit;"
+	st = status
+	co = checkout
+	ci = commit
+	graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+	br = checkout -b
+	pl = pull --prune
+	# http://qiita.com/hajimeni/items/73d2155fc59e152630c4
+	clean-local = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|master'|xargs git branch -d; };f"
+	clean-remote = remote prune origin
+	# http://qiita.com/ktty1220/items/d1daf4357ed5f5ceae69
+	as = !"if test -z $1; then loop=; for k in `git config --get-regexp ^alias\\. | sort | sed -e 's/^alias\\.\\(\\S*\\).*/\\1/g'`; do echo -n $k; loop="${loop}1"; if test ${#loop} -lt 5; then echo -n '\t'; else echo; loop=; fi; done; exit; fi; git config --list | grep ^alias\\.$1= | sed -e s/^alias\\.//; exit;"
 [push]
-    default = simple
+	default = simple
 [core]
 	excludesfile = /Users/zoe/.gitignore_global
