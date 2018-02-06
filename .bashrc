@@ -55,6 +55,8 @@ alias scr='sc -R'
 alias scl='sc -list'
 # tmux
 alias tm='tmux'
+# xargs
+alias xs='xargs'
 
 #########################################
 # PS1
