@@ -5,10 +5,11 @@
 	ui = true
 [alias]
 	st = status
-	co = checkout
-	ci = commit
+	ch = checkout
+	cb = checkout -b
+	co = commit
 	graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
-	br = checkout -b
+	br = branch
 	pl = pull --prune
 	# http://qiita.com/hajimeni/items/73d2155fc59e152630c4
 	clean-local = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|master'|xargs git branch -d; };f"
