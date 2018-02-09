@@ -1,6 +1,17 @@
+defutf8 on
+defencoding utf8
+encoding utf8 utf8
+
+# Delete start up screen
+startup_message off
+vbell off
+
+# default shell
+shell $SHELL
+
 # enable scroll
 termcapinfo linux ti@:te@
-termcapinfo xterm ti@:te@
+termcapinfo xterm* ti@:te@
 termcapinfo xterm-color ti@:te@
 defscrollback 1024
 
@@ -10,9 +21,6 @@ defmonitor on
 # escape setting Ctrl-t
 escape ^Tt
 
-# Delete start up screen
-startup_message off
-
 # Enable Auto detach
 autodetach on
 
@@ -20,6 +28,9 @@ autodetach on
 hardstatus alwayslastline "%{= rw} %H %{= wk}%-Lw%{= bw}%n%f* %t%{= wk}%+Lw %{= wk}%=%{= gk} %y/%m/%d %c "
 #hardstatus alwayslastline "%{=r dd}%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
 #hardstatus alwayslastline '%{= kw}%02c:%s %{= .y}%H %L=%{= .b}%-w%46>%{= .r}%n %t*%{= .b}%+w%-16=%{= .y}[%l]'
+
+# remve buffer 
+altscreen on
 
 # Resize window
 bind e eval 'command -c resize' 'echo "Resize window"'
