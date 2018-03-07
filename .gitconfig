@@ -20,3 +20,5 @@
 	default = simple
 [core]
 	excludesfile = /Users/zoe/.gitignore_global
+[ghq]
+	root = ~/src
