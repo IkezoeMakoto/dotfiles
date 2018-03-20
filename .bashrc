@@ -12,6 +12,9 @@ fi
 # ctrl+s で出力がロックされてしまうのを防ぐ
 stty stop undef
 
+# history にコマンド実行時刻を記録する
+HISTTIMEFORMAT='[%Y-%m-%d %T] '
+
 #########################################
 # OSごとの設定
 #########################################
@@ -96,4 +99,4 @@ _colored_host=$(echo -e "\e[03${_color_map[${_cl_host_index}]}m\H\e[m")
 _colored_user=$(echo -e "\e[03${_color_map[${_cl_user_index}]}m\u\e[m")
 
 # prompt setting
-PS1="\[${_colored_user}@${_colored_host}:\[\033[35m\]\w\[\033[00m\]\]"'$(__git_ps1)\n$ '
+PS1="\[[\t] ${_colored_user}@${_colored_host}:\[\033[35m\]\w\[\033[00m\]\]"'$(__git_ps1)\n$ '
