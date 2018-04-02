@@ -1,12 +1,14 @@
 .PHONY: all clean
 
+include detect.mk
+
 all: peco jq ghq git-completion.bash git-prompt.sh
 
 clean:
 	rm -rf peco jq ghq git-*
 
 peco:
-	wget https://github.com/peco/peco/releases/download/v0.2.9/peco_linux_amd64.tar.gz
+	wget https://github.com/peco/peco/releases/download/v0.2.9/peco_$(OS)_$(PROC).tar.gz
 	tar -xzf peco_linux_amd64.tar.gz
 	mv peco_linux_amd64/peco .
 	rm -rf peco_linux_amd64*
@@ -15,7 +17,7 @@ jq:
 	chmod +x jq
 
 ghq:
-	wget -P tmp https://github.com/motemen/ghq/releases/download/v0.8.0/ghq_linux_amd64.zip
+	wget -P tmp https://github.com/motemen/ghq/releases/download/v0.8.0/ghq_$(OS)_$(PROC).zip
 	cd tmp && unzip ghq_linux_amd64.zip
 	cp tmp/ghq ./ && rm -rf tmp
 
