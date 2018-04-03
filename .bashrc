@@ -56,11 +56,14 @@ export SCREENDIR=~/.screens
 alias sc=screen
 alias scx='sc -x'
 alias scr='sc -R'
+alias scs='sc -S'
 alias scl='sc -list'
 # tmux
 alias tm='tmux'
 # xargs
 alias xs='xargs'
+# peco
+alias pc='peco'
 
 #########################################
 # PS1
