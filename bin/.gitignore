@@ -2,4 +2,4 @@
 !.gitignore
 !Makefile
 !detect.mk
-!env/
+!env/*
