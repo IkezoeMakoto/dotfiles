@@ -5,13 +5,13 @@ endif
 ifeq ($(UNAME_S),Darwin)
     OS := darwin
 endif
-UNAME_P := $(shell uname -p)
-ifeq ($(UNAME_P),x86_64)
+UNAME_M := $(shell uname -m)
+ifeq ($(UNAME_M),x86_64)
     PROC := amd64
 endif
-ifneq ($(filter %86,$(UNAME_P)),)
-    PROC := ia32
+ifeq ($(UNAME_M),i386)
+    PROC := 386
 endif
-ifneq ($(filter arm%,$(UNAME_P)),)
+ifneq ($(filter arm%,$(UNAME_M)),)
     PROC := arm
 endif

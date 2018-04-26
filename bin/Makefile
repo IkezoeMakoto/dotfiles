@@ -1,25 +1,19 @@
-.PHONY: all clean
+PECO_V=v0.5.3
+JQ_V=jq-1.5
+GHQ_V=v0.8.0
+
+.PHONY: all clean test
 
 include detect.mk
+include env/$(OS)_$(PROC).mk
 
 all: peco jq ghq git-completion.bash git-prompt.sh
 
 clean:
 	rm -rf peco jq ghq git-*
 
-peco:
-	wget https://github.com/peco/peco/releases/download/v0.2.9/peco_$(OS)_$(PROC).tar.gz
-	tar -xzf peco_linux_amd64.tar.gz
-	mv peco_linux_amd64/peco .
-	rm -rf peco_linux_amd64*
-jq:
-	wget -O jq https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
-	chmod +x jq
-
-ghq:
-	wget -P tmp https://github.com/motemen/ghq/releases/download/v0.8.0/ghq_$(OS)_$(PROC).zip
-	cd tmp && unzip ghq_linux_amd64.zip
-	cp tmp/ghq ./ && rm -rf tmp
+test:
+	@echo $(OS)_$(PROC)
 
 git-completion.bash:
 	wget https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
