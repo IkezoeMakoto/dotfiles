@@ -5,12 +5,13 @@ GHQ_V=v0.8.0
 .PHONY: all clean test
 
 include detect.mk
-include env/$(OS)_$(PROC).mk
 
 all: peco jq ghq git-completion.bash git-prompt.sh
 
 clean:
 	rm -rf peco jq ghq git-*
+
+include env/$(OS)_$(PROC).mk
 
 test:
 	@echo $(OS)_$(PROC)
