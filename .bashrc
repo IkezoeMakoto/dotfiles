@@ -49,6 +49,8 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
 #alias ps='ps --sort=start_time'
+# git
+alias g='git'
 # docker
 alias fig=docker-compose
 # screen
@@ -64,6 +66,10 @@ alias tm='tmux'
 alias xs='xargs'
 # peco
 alias pc='peco'
+# ghq
+alias gh='ghq'
+alias gli='gh list'
+alias glo='gh look'
 
 #########################################
 # PS1
