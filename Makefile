@@ -1,3 +1,5 @@
+.PHONY: all list deploy clean install cron/*
+
 DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 CANDIDATES := $(wildcard .??*) bin
 EXCLUSIONS := .DS_Store .git .gitmodules .travis.ym .gitignore
