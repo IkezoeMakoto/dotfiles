@@ -20,7 +20,6 @@ curl -L https://github.com/ikezoeMakoto.keys > $auth_file
 INSTALL_DIR=$HOME/src/github.com/IkezoeMakoto/
 mkdir -p $INSTALL_DIR && cd $INSTALL_DIR
 
-# clone self
+# clone self and deploy
 git clone git@github.com:IkezoeMakoto/dotfiles.git
-cd dotfiles/
-make deploy
+make -C dotfiles deploy
