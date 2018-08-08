@@ -6,7 +6,7 @@ GHQ_V=v0.8.0
 
 include detect.mk
 
-all: peco jq ghq git-completion.bash git-prompt.sh
+all: peco jq ghq gg git-completion.bash git-prompt.sh
 
 clean:
 	rm -rf peco jq ghq git-*

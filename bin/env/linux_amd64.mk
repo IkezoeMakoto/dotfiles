@@ -13,3 +13,7 @@ ghq:
 	wget -P tmp https://github.com/motemen/ghq/releases/download/$(GHQ_V)/ghq_linux_amd64.zip
 	cd tmp && unzip ghq_linux_amd64.zip
 	cp tmp/ghq ./ && rm -rf tmp
+
+gg:
+	wget -O gg https://github.com/jesseduffield/lazygit/releases/download/v0.1.11/lazygit_linux_amd64_v0.1.11
+	chmod +x gg
