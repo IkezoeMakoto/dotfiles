@@ -2,9 +2,9 @@
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 export GOPATH=$HOME
-export PATH="$HOME/bin:$HOME/.pyenv/bin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-eval "$(pyenv init -)"
+#export PATH="$HOME/bin:$HOME/.pyenv/bin:$PATH"
+#export PYENV_ROOT="$HOME/.pyenv"
+#eval "$(pyenv init -)"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -62,6 +62,7 @@ alias scx='sc -x'
 alias scr='sc -R'
 alias scs='sc -S'
 alias scl='sc -list'
+alias scw='sc -wipe'
 # tmux
 alias tm='tmux'
 # xargs
