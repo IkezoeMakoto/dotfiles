@@ -2,7 +2,8 @@
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 export GOPATH=$HOME
-#export PATH="$HOME/bin:$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+#export PATH="$HOME/.pyenv/bin:$PATH"
 #export PYENV_ROOT="$HOME/.pyenv"
 #eval "$(pyenv init -)"
 
