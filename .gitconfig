@@ -8,6 +8,7 @@
 	ch = checkout
 	cb = checkout -b
 	co = commit
+	ph = push origin HEAD
 	graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
 	br = branch
 	pl = pull --prune
