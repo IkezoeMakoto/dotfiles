@@ -16,3 +16,9 @@ ghq:
 gg:
 	wget -O gg https://github.com/jesseduffield/lazygit/releases/download/v0.1.11/lazygit_darwin_amd64_v0.1.11
 	chmod +x gg
+
+trdsql:
+	wget -P tmp https://github.com/noborus/trdsql/releases/download/v0.7.3/trdsql_v0.7.3_darwin_amd64.zip
+	cd tmp && unzip trdsql_v0.7.3_darwin_amd64.zip
+	mv tmp/trdsql_v0.7.3_darwin_amd64/trdsql ./ && rm -rf tmp
+	chmod +x trdsql
