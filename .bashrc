@@ -73,6 +73,7 @@ alias pc='peco'
 alias gh='ghq'
 alias gli='gh list'
 alias glo='gh look'
+alias repo='cd $(ghq root)/$(ghq list | peco)'
 
 #########################################
 # PS1
