@@ -5,6 +5,7 @@
 	ui = true
 [alias]
 	st = status
+	s  = switch
 	ch = checkout
 	cb = checkout -b
 	co = commit
