@@ -6,6 +6,8 @@ export PYTHONUSERBASE=~/
 export PATH="$HOME/bin:$PATH:/usr/local/go/bin"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 #export PATH="$HOME/.pyenv/bin:$PATH"
+# gnu-sed overwrite sed
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 #export PYENV_ROOT="$HOME/.pyenv"
 #eval "$(pyenv init -)"
 
