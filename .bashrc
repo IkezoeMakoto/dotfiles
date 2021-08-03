@@ -3,10 +3,14 @@ export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 export GOPATH=$HOME
 export PYTHONUSERBASE=~/
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$PATH:/usr/local/go/bin"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 #export PATH="$HOME/.pyenv/bin:$PATH"
+# gnu-sed overwrite sed
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 #export PYENV_ROOT="$HOME/.pyenv"
 #eval "$(pyenv init -)"
+eval "$(gh completion -s bash)"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -75,6 +79,7 @@ alias pc='peco'
 alias gh='ghq'
 alias gli='gh list'
 alias glo='gh look'
+# repo
 alias repo='cd $(ghq root)/$(ghq list | peco)'
 
 #########################################
