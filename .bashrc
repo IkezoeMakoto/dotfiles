@@ -10,7 +10,6 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 #export PYENV_ROOT="$HOME/.pyenv"
 #eval "$(pyenv init -)"
-eval "$(gh completion -s bash)"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -29,6 +28,7 @@ HISTTIMEFORMAT='[%Y-%m-%d %T] '
 case "${OSTYPE}" in
 # mac
 darwin*)
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   # bash_completion for mac
   if [ -f `brew --prefix`/etc/bash_completion ]; then
       . `brew --prefix`/etc/bash_completion
@@ -75,10 +75,6 @@ alias tm='tmux'
 alias xs='xargs'
 # peco
 alias pc='peco'
-# ghq
-alias gh='ghq'
-alias gli='gh list'
-alias glo='gh look'
 # repo
 alias repo='cd $(ghq root)/$(ghq list | peco)'
 

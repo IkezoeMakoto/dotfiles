@@ -13,5 +13,5 @@ ifeq ($(UNAME_M),i386)
     PROC := 386
 endif
 ifneq ($(filter arm%,$(UNAME_M)),)
-    PROC := arm
+    PROC := arm64
 endif

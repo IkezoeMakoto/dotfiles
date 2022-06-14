@@ -1,15 +1,15 @@
-PECO_V=v0.5.3
-JQ_V=jq-1.5
-GHQ_V=v0.8.0
+PECO_V=v0.5.10
+JQ_V=jq-1.6
+GHQ_V=v1.3.0
 
 .PHONY: all clean test
 
 include detect.mk
 
-all: peco jq ghq gg git-completion.bash git-prompt.sh
+all: peco jq ghq gg trdsql git-completion.bash git-prompt.sh
 
 clean:
-	rm -rf peco jq ghq git-*
+	rm -rf peco jq ghq git-* gg trdsql
 
 include env/$(OS)_$(PROC).mk
 
