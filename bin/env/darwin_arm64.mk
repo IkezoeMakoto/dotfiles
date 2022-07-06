@@ -11,7 +11,7 @@ jq:
 ghq:
 	wget -P tmp https://github.com/motemen/ghq/releases/download/$(GHQ_V)/ghq_darwin_arm64.zip
 	cd tmp && unzip ghq_darwin_arm64.zip
-	cp tmp/ghq_darwin_arm64/ghq ./ && rm -rf tmp
+	cp tmp/ghq_darwin_arm64/ghq ./ && rm -rf tmp/ghq*
 
 gg:
 	wget https://github.com/jesseduffield/lazygit/releases/download/v0.34/lazygit_0.34_Darwin_arm64.tar.gz
@@ -22,5 +22,5 @@ gg:
 trdsql:
 	wget -P tmp https://github.com/noborus/trdsql/releases/download/v0.10.0/trdsql_v0.10.0_darwin_arm64.zip
 	cd tmp && unzip trdsql_v0.10.0_darwin_arm64.zip
-	mv tmp/trdsql_v0.10.0_darwin_arm64/trdsql ./ && rm -rf tmp
+	mv tmp/trdsql_v0.10.0_darwin_arm64/trdsql ./ && rm -rf tmp/trdsql*
 	chmod +x trdsql
