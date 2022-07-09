@@ -107,8 +107,8 @@ _color_map=(${_color_map[*]} 6)   # cyan
 _color_map=(${_color_map[*]} 7)   # white
 
 # Coloring hostname and username
-_cl_host_index=$(/usr/bin/python -c 'print hash("'$HOSTNAME'") % '${#_color_map[*]}'')
-_cl_user_index=$(/usr/bin/python -c 'print hash("'$USER'") % '${#_color_map[*]}'')
+_cl_host_index=$(/usr/bin/python3 -c 'print(hash("'$HOSTNAME'") % '${#_color_map[*]}')')
+_cl_user_index=$(/usr/bin/python3 -c 'print(hash("'$USER'") % '${#_color_map[*]}')')
 
 # color setting
 _colored_host=$(echo -e "\e[03${_color_map[${_cl_host_index}]}m\H\e[m")
