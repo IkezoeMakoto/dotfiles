@@ -4,12 +4,9 @@ export LESSCHARSET=utf-8
 export GOPATH=$HOME
 export PYTHONUSERBASE=~/
 export PATH="$HOME/bin:$PATH:/usr/local/go/bin"
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-#export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 # gnu-sed overwrite sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-#export PYENV_ROOT="$HOME/.pyenv"
-#eval "$(pyenv init -)"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -29,6 +26,7 @@ case "${OSTYPE}" in
 # mac
 darwin*)
   eval "$(/opt/homebrew/bin/brew shellenv)"
+  eval "$(anyenv init -)"
   # bash_completion for mac
   if [ -f `brew --prefix`/etc/bash_completion ]; then
       . `brew --prefix`/etc/bash_completion

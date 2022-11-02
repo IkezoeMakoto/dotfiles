@@ -31,3 +31,5 @@
 	quotepath = false
 [ghq]
 	root = ~/src
+[init]
+	defaultBranch = main
