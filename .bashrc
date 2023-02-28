@@ -7,6 +7,10 @@ export PATH="$HOME/bin:$PATH:/usr/local/go/bin"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 # gnu-sed overwrite sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+# wasm
+export PATH="/Users/ikezoe0309/.wasmer/globals/wapm_packages/.bin:$PATH"
+# git wrapper
+# alias git='~/git.sh'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
