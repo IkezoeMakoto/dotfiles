@@ -79,6 +79,8 @@ alias xs='xargs'
 alias pc='peco'
 # repo
 alias repo='cd $(ghq root)/$(ghq list | peco)'
+alias sw='git branch | peco | xargs git switch'
+alias rpsw='repo && sw'
 
 #########################################
 # PS1
