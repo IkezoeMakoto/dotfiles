@@ -51,6 +51,7 @@ brew "wapm"
 brew "wasmer"
 brew "wget"
 brew "yarn"
+brew "yq"
 brew "oven-sh/bun/bun"
 cask "alfred"
 cask "chromedriver"
@@ -72,8 +73,10 @@ cask "visual-studio-code"
 cask "warp"
 mas "Azure VPN Client", id: 1553936137
 mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
 mas "Slack", id: 803453959
 mas "WattageViewer", id: 1548099536
+mas "Webcam Settings", id: 533696630
 vscode "4ops.packer"
 vscode "4ops.terraform"
 vscode "amiralizadeh9480.laravel-extra-intellisense"
