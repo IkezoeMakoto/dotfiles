@@ -15,3 +15,6 @@ endif
 ifneq ($(filter arm%,$(UNAME_M)),)
     PROC := arm64
 endif
+ifneq ($($(UNAME_M)),aarch64)
+    PROC := arm64
+endif

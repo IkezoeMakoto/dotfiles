@@ -1,5 +1,5 @@
 PECO_V=v0.5.10
-JQ_V=jq-1.6
+JQ_V=jq-1.7.1
 GHQ_V=v1.3.0
 
 .PHONY: all clean test

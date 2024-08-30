@@ -5,6 +5,10 @@ export GOPATH=$HOME
 export PYTHONUSERBASE=~/
 export PATH="$HOME/bin:$PATH:/usr/local/go/bin"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export PATH="$HOME/src/github.com/tfutils/tfenv/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 # gnu-sed overwrite sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 # wasm
