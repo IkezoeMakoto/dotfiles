@@ -1,3 +1,4 @@
 MAILTO=150283t@gmail.com
 
-05 * * * * /usr/bin/docker system prune -f >/dev/null
+30 18 * * * /usr/bin/docker system prune -f >/dev/null
+30 18 * * * mv /Users/{userName}/Downloads/* /tmp

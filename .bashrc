@@ -1,20 +1,22 @@
 # .bashrc
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
+# own bin and go bin
 export GOPATH=$HOME
-export PYTHONUSERBASE=~/
 export PATH="$HOME/bin:$PATH:/usr/local/go/bin"
+# mysql-client
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+# tfenv
 export PATH="$HOME/src/github.com/tfutils/tfenv/bin:$PATH"
+# python
 export PYENV_ROOT="$HOME/.pyenv"
+export PYTHONUSERBASE=~/
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 # gnu-sed overwrite sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 # wasm
 export PATH="/Users/ikezoe0309/.wasmer/globals/wapm_packages/.bin:$PATH"
-# git wrapper
-# alias git='~/git.sh'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -36,10 +38,8 @@ darwin*)
   eval "$(/opt/homebrew/bin/brew shellenv)"
   eval "$(anyenv init -)"
   # bash_completion for mac
-  if [ -f `brew --prefix`/etc/bash_completion ]; then
-      . `brew --prefix`/etc/bash_completion
-  fi
-
+  [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+  
   #########################################
   # alias
   #########################################
