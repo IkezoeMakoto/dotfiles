@@ -1,6 +1,6 @@
-# .bashrc
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
+export BASH_SILENCE_DEPRECATION_WARNING=1
 # own bin and go bin
 export GOPATH=$HOME
 export PATH="$HOME/bin:$PATH:/usr/local/go/bin"
@@ -39,7 +39,6 @@ darwin*)
   eval "$(anyenv init -)"
   # bash_completion for mac
   [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-  
   #########################################
   # alias
   #########################################
@@ -85,6 +84,8 @@ alias pc='peco'
 alias repo='cd $(ghq root)/$(ghq list | peco)'
 alias sw='git branch | peco | xargs git switch'
 alias rpsw='repo && sw'
+alias awsenv='export AWS_DEFAULT_PROFILE=$(aws configure list-profiles | peco)'
+alias awslogin='awsenv && aws sso login'
 
 #########################################
 # PS1
