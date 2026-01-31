@@ -8,11 +8,12 @@ export PATH="$HOME/bin:$PATH:/usr/local/go/bin"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 # tfenv
 export PATH="$HOME/src/github.com/tfutils/tfenv/bin:$PATH"
-# python
+# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PYTHONUSERBASE=~/
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv >/dev/null 2>&1; then
+  eval "$(pyenv init - bash)"
+fi
 # gnu-sed overwrite sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 # wasm
