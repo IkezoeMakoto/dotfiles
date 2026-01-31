@@ -1,5 +1,3 @@
-.PHONY: all list deploy clean install cron/*
-
 DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 CANDIDATES := $(wildcard .??*) bin
 EXCLUSIONS := .DS_Store .git .gitmodules .travis.ym .gitignore
@@ -8,27 +6,39 @@ DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 .DEFAULT_GOAL := help
 
 all:
+.PHONY: all
 
 ls:
 	/bin/ls
 
 list: ## Show dot files in this repo
 	@$(foreach val, $(DOTFILES), ls $(val);)
+.PHONY: list
 
 deploy: ## Create symlink to home directory
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
 	$(MAKE) install
 	$(MAKE) cron/set
+.PHONY: deploy
 
 install:
 	$(MAKE) -j -C bin
+.PHONY: install
 
-cron/set:
+cron.set:
 	crontab etc/cron/crontab
-cron/get:
+cron.get:
 	crontab -l > etc/cron/crontab
+.PHONY: cron.set cron.get
 
 clean: ## Remove the dot files and this repo
 	@echo 'Remove dot files in your home directory...'
 	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
 	-rm -rf $(DOTPATH)
+.PHONY: clean
+
+brew.dump: ## Dump Brewfile
+	brew bundle dump --file=$(DOTPATH)/Brewfile --force
+brew.restore: ## Restore from Brewfile
+	brew bundle install --file=$(DOTPATH)/Brewfile
+.PHONY: brew.dump brew.restore

@@ -17,6 +17,8 @@ eval "$(pyenv init -)"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 # wasm
 export PATH="/Users/ikezoe0309/.wasmer/globals/wapm_packages/.bin:$PATH"
+# asdf
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -57,6 +59,7 @@ linux*)
   alias la='ls -CFal'
   ;;
 esac
+. <(asdf completion bash)
 # 共通
 alias mv='mv -i'
 alias rm='rm -i'
@@ -84,6 +87,7 @@ alias pc='peco'
 alias repo='cd $(ghq root)/$(ghq list | peco)'
 alias sw='git branch | peco | xargs git switch'
 alias rpsw='repo && sw'
+# aws
 alias awsenv='export AWS_DEFAULT_PROFILE=$(aws configure list-profiles | peco)'
 alias awslogin='awsenv && aws sso login'
 
